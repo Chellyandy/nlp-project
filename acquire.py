@@ -20,7 +20,22 @@ from env import github_token, github_username
 # TODO: Add your github username to your env.py file under the variable `github_username`
 # TODO: Add more repositories to the `REPOS` list below.
 
-REPOS = []
+REPOS = ['/rdpeng/ProgrammingAssignment2','/github/docs','/torvalds/linux',
+         '/facebook/react','/TheAlgorithms/Python','/jlord/patchwork',
+         '/trekhleb/javascript-algorithms','/angular/angular.js','/macrozheng/mall',
+         '/facebook/create-react-app','/Significant-Gravitas/Auto-GPT','/apache/dubbo',
+         '/udacity/frontend-nanodegree-resume','/996icu/996.ICU','/othneildrew/Best-README-Template',
+         '/TheOdinProject/javascript-exercises','/jquery/jquery','/trustwallet/assets',
+         '/CSSEGISandData/COVID-19','/moby/moby','/donnemartin/system-design-primer',
+         '/spring-projects/spring-boot','/rdpeng/RepData_PeerAssessment1','/google/it-cert-automation-practice',
+         '/kubernetes/kubernetes','/spring-projects/spring-framework','/barryclark/jekyll-now',
+         '/bitcoin/bitcoin','/mrdoob/three.js','/kamranahmedse/developer-roadmap','/bitcoin/bitcoin',
+         '/mrdoob/three.js','/kamranahmedse/developer-roadmap','/vuejs/vue','/wesbos/JavaScript30',
+         '/getify/You-Dont-Know-JS','/freeCodeCamp/freeCodeCamp','/qmk/qmk_firmware',
+         '/Yidadaa/ChatGPT-Next-Web','/DataScienceSpecialization/courses','/freeCodeCamp/freeCodeCamp',
+         '/qmk/qmk_firmware', '/Yidadaa/ChatGPT-Next-Web', '/DataScienceSpecialization/courses', '/Significant-Gravitas/Auto-GPT',
+         '/PanJiaChen/vue-element-admin','/mui/material-ui','/django/django','/DefinitelyTyped/DefinitelyTyped',
+         '/academicpages/academicpages.github.io']
  
 
 headers = {"Authorization": f"token {github_token}", "User-Agent": github_username}
