@@ -5,6 +5,7 @@ We would be utilizing data from Github README files to analyze and predict progr
 The goal is to analyze and develop an model capable of predicting the primary programming language of a repository based on its content and structure. This will enable efficient categorization and organization of code repositories, aiding developers in discovering relevant projects and facilitating collaboration within the programming community.
 
 # Data Dictionary:
+![Alt text]((https://github.com/Chellyandy/nlp-project/edit/main/README.md#:~:text=data-,dictionary,-.numbers))
 # Initial Thoughts/Questions:
 # Project Plan:
 - Acquire:
