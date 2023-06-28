@@ -48,7 +48,8 @@
 
 - Deliverables:
    - A five minutes slide presentation summarizing findings in exploration and results of modeling.
-   
+   - Presentation link: https://www.canva.com/design/DAFnILbp2FM/ktrNLA-yGZ_AN6A2tKiG4Q/edit?utm_content=DAFnILbp2FM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+  
 # Summary/Takeaways:
 
 
