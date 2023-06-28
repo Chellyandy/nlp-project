@@ -43,7 +43,7 @@
       4. What are the least common words throughout the data frame and  per each language?
 - Modeling:
    - After vectorizing the words, we will use accuracy as our evaluation metric.
-   - The baseline accuracy is 47.1%.
+   - The baseline accuracy is 42.5%.
    - We employed Decision Tree Classifier, Random Forest, and K-Nearest Neighbor as our models for predicting                programming languages based on README content.
 
 - Deliverables:
