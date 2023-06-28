@@ -16,7 +16,7 @@
 # Steps on How to Reproduce Project:
 1. Access the nlp-project repository on GitHub.
 2. Click on the "Code" button and select "Download ZIP" to download the entire repository to your computer. Extract the downloaded ZIP file to a directory of your choice, or you can copy the SSH code to your terminal.
-3. isit https://github.com/settings/tokens and generate a personal access token by clicking on the "Generate new token" button. Make sure to leave all checkboxes unchecked to avoid selecting any scopes.
+3. Visit https://github.com/settings/tokens and generate a personal access token by clicking on the "Generate new token" button. Make sure to leave all checkboxes unchecked to avoid selecting any scopes.
 4. Add env.py to the nlp-project file on your computer.
 5. Copy the generated personal access token and paste it into your env.py file under the variable github_token.
 6. Similarly, add your GitHub username to your env.py file under the variable github_username.
@@ -24,7 +24,7 @@
    
 # Project Plan:
 - Acquire:
-    - Acquired the data from github.com by extracting the ["Most     Forked Repositories"].([https://www.kaggle.com/datasets/meirnizri/covid19-dataset](https://github.com/search?o=desc&q=stars:%3E1&s=forks&type=Repositories))
+    - Acquired the data from github.com by extracting the ["Most Forked Repositories"]([https://www.kaggle.com/datasets/meirnizri/covid19-dataset](https://github.com/search?o=desc&q=stars:%3E1&s=forks&type=Repositories))
     - Data was collected as of June 27, 2023.
     - Data was scraped and a JSON file was created (data2.json).
     - Data Contains 180 repositories.
