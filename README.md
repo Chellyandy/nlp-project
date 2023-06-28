@@ -43,7 +43,7 @@
       4. What are the least common words throughout the data frame and  per each language?
 - Modeling:
    - After vectorizing the words, we will use accuracy as our evaluation metric.
-   - The baseline accuracy is 42.5%.
+   - The baseline accuracy is 47.1%.
    - We employed Decision Tree Classifier, Random Forest, and K-Nearest Neighbor as our models for predicting                programming languages based on README content.
 
 - Deliverables:
@@ -51,6 +51,22 @@
    - Presentation link: https://www.canva.com/design/DAFnILbp2FM/ktrNLA-yGZ_AN6A2tKiG4Q/edit?utm_content=DAFnILbp2FM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
   
 # Summary/Takeaways:
+- JavaScript 'img', 'bootstrap', 'c' are significantly more prevalent in the language categories compared to other languages.
+- Python shows a higher occurrence of 'python' and 'doc' compared to other language categories.
+- Java stands out with a significantly higher usage of 'readme' compared to other language categories.
+- TypeScript and JavaScript have a notable preference for the word 'code' compared to other language categories.
+- HTML shares the most common words with other language categories, indicating a more balanced distribution.
+- Java utilizes "dubbo" and "apache" more frequently than the other languages.
+- JavaScript has a higher usage of "bootstrap" and "jquery" compared to the other languages.
+- TypeScript shows a higher occurrence of "chatgpt" compared to the other languages.
+- The ANOVA test results indicate that the word count does not effectively identify language categories, and thus the null hypothesis cannot be rejected.
+- The word cloud looks neat and is fun to make, however, it is very difficult to obtain any useful information from it.
+- The Decision Tree model demonstrated superior performance in both the train and validate iterations.
+- The test data achieved an accuracy of 54%, surpassing the baseline by 7%.
 
-
-# Key Findings, Recommendations, and Next Steps:
+# Recommendations, and Next Steps:
+- Our model is recommended for predicting programming languages based on README file content across repositories.
+- Further improvements can be made by acquiring more data, exploring different models and hyperparameters.
+- Utilize different features for modeling purposes is also a potential avenue for enhancement.
+- Efficient data cleaning and research on tools, frameworks, and libraries associated with each language will provide further exploration opportunities.
+- Add programming languages tools and frameworks as a new feature for modeling purposes.
