@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import time
 
 #see the data
 import matplotlib.pyplot as plt
@@ -11,17 +10,9 @@ import seaborn as sns
 import nltk.sentiment
 import nltk
 import re
-from pprint import pprint
-
 #split and model
 from scipy.stats import f_oneway
-import scipy.stats as stats
 from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier
-from nltk.tokenize import ToktokTokenizer
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression
 
 #import 
 from sklearn.feature_extraction.text import CountVectorizer
@@ -29,25 +20,10 @@ from sklearn.feature_extraction.text import CountVectorizer
 #sql creds
 import env as e
 import acquire as a
-#scraping
-import requests
-from bs4 import BeautifulSoup
+
 
 import os
 import json
-from typing import Dict, List, Optional, Union, cast
-import requests
-
-from env import github_token, github_username
-
-import warnings
-warnings.filterwarnings("ignore", category=DeprecationWarning)
-warnings.filterwarnings("ignore", category=FutureWarning)
-
-# setting basic style parameters for matplotlib
-plt.rc('figure', figsize=(13, 7))
-plt.style.use('seaborn-darkgrid')
-
 
 def split_data(df, variable):
     '''
@@ -91,6 +67,16 @@ def create_pie_chart(df, column_name,title):
     plt.show()
 
 def question_1(train):
+    """
+    Analyzes word frequency in different programming languages based on their cleaned contents.
+
+    Args:
+    train (pandas.DataFrame): DataFrame containing the training data.
+
+    Returns:
+    word_counts (pandas.DataFrame): DataFrame with word counts for each programming language and overall.
+
+    """
     # we can do that process with a join on a Series and not just a list
     # we will do that all words and categories
     # we will pass our basic cleaning on top of that
@@ -134,6 +120,16 @@ def question_1(train):
     return word_counts.head()
 
 def question_2(train):
+    """
+    Analyzes word frequency in specific libraries/tools across different programming languages.
+
+    Args:
+    train (pandas.DataFrame): DataFrame containing the training data.
+
+    Returns:
+    word_counts (pandas.DataFrame): DataFrame with word counts for each programming language, overall, and specific libraries/tools.
+
+    """
     # we can do that process with a join on a Series and not just a list
     # we will do that all words and categories
     # we will pass our basic cleaning on top of that
@@ -180,6 +176,16 @@ def question_2(train):
     return word_counts.head()
 
 def question_3(train):
+    """
+    Determines the most used words and their corresponding language across different programming languages.
+
+    Args:
+    train (pandas.DataFrame): DataFrame containing the training data.
+
+    Returns:
+    most_used_words_per_column (pandas.Series): Series containing the most used words and their corresponding language.
+
+    """
     # we can do that process with a join on a Series and not just a list
     # we will do that all words and categories
     # we will pass our basic cleaning on top of that
@@ -230,6 +236,16 @@ def question_3(train):
     return print(most_used_words_per_column)
 
 def question_4(train):
+    """
+    Determines the least used words and their corresponding language across different programming languages.
+
+    Args:
+    train (pandas.DataFrame): DataFrame containing the training data.
+
+    Returns:
+    least_used_words_per_column (pandas.Series): Series containing the least used words and their corresponding language.
+
+    """
     # we can do that process with a join on a Series and not just a list
     # we will do that all words and categories
     # we will pass our basic cleaning on top of that
@@ -280,6 +296,16 @@ def question_4(train):
     return print(least_used_words_per_column)
 
 def stats_ANOVA_viz(train):
+    """
+    Performs ANOVA test and visualizes the relationship between message length and language category.
+
+    Args:
+    train (pandas.DataFrame): DataFrame containing the training data.
+
+    Returns:
+    None
+
+    """
 
     # prepare categories for ANOVA test
     javascript_stats_ml = train[train.language=='JavaScript']['message_length']
@@ -312,6 +338,16 @@ def stats_ANOVA_viz(train):
     return
 
 def word_cloud_all(train):
+    """
+    Generates a word cloud visualization of the most common words in the entire dataset.
+
+    Args:
+    train (pandas.DataFrame): DataFrame containing the training data.
+
+    Returns:
+    None
+
+    """
     #set all words
     all_words = clean(' '.join(train['clean_contents']))
     #generate cloud
@@ -323,6 +359,16 @@ def word_cloud_all(train):
     plt.show()
 
 def sentiment(train):
+    """
+    Calculates and visualizes the distribution of sentiment across different programming languages in the dataset.
+
+    Args:
+    train (pandas.DataFrame): DataFrame containing the training data.
+
+    Returns:
+    pandas.DataFrame: DataFrame with the mean and median sentiment values for each programming language.
+
+    """
 
     info = train.groupby('language').sentiment.agg(['mean','median'])
 

@@ -1,52 +1,24 @@
 import pandas as pd
 import numpy as np
-import time
-
-#see the data
-import matplotlib.pyplot as plt
-from wordcloud import WordCloud
-import seaborn as sns
 
 #play with words
 import nltk.sentiment
 import nltk
 import re
-from pprint import pprint
 
 #split and model
-from scipy.stats import f_oneway
-import scipy.stats as stats
-from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier
 from nltk.tokenize import ToktokTokenizer
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression
-
-#import 
-from sklearn.feature_extraction.text import CountVectorizer
 
 #sql creds
 import env as e
 import acquire as a
-#scraping
-import requests
-from bs4 import BeautifulSoup
 
 import os
 import json
-from typing import Dict, List, Optional, Union, cast
-import requests
-
-from env import github_token, github_username
 
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 warnings.filterwarnings("ignore", category=FutureWarning)
-
-# setting basic style parameters for matplotlib
-plt.rc('figure', figsize=(13, 7))
-plt.style.use('seaborn-darkgrid')
 
 def tokenize(text):
     """
@@ -76,6 +48,13 @@ def clean(text: str) -> list:
     return [wnl.lemmatize(word) for word in words if word not in stopwords]
 
 def nlp_wrangle():
+    """
+    Performs data wrangling for natural language processing (NLP) tasks.
+
+    Returns:
+    df (pandas.DataFrame): Processed DataFrame with cleaned and filtered data for NLP analysis.
+
+    """
     #get data
     df = pd.read_json('data2.json')
 
